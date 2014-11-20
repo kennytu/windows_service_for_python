@@ -34,7 +34,7 @@ Note that the keyword **\_svc_name\_**, **\_svc_display_name\_** and **_svc_desc
 * \_svc_description_ : It's just a description and will be put the note.
 
 ##Test Method 
-### Using python and net (windows) tool
+### Pythonic way
 When you write down the code which name is MyService.py for example, you cane use the pythonic way to test, the instruction list below.
 
 1. python MyService.py install (install the service to windows)
@@ -43,7 +43,7 @@ When you write down the code which name is MyService.py for example, you cane us
 4. net stop KennySrv (stop the service from windows)
 5. python MyService.py remove  (remove the servie from windows service register list)
 
-### Using Binary
+### Executable way
 If your python script has been converted to executable file(using pyinstaller or py2exe), then you can just do the same thing but no python keyword
 
 1. MyService.exe install
@@ -56,6 +56,9 @@ You can open the debug mode like this
 * python MyService.py debug, or
 * MyService.exe debug
 All of the messages will be output to console screen.
+
+## Issue
+If you use net command to start the service but the servies can't run successfully, restart again, it will be ok.
 
 ### Net tool and sc tool
 * NET COMMAND: The net use command is a Command Prompt command that's used to connect to, remove, and configure connections to shared resources, like mapped drives and network printers.
